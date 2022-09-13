@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+body {
+  background-color: black;
+  font-family: 'Italiana', serif;;
+}
+
+#app h1 {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+}
