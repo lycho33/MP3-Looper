@@ -2,16 +2,17 @@
     <div>
         <h3>Images</h3>
         <img :src="getImageUrl(ironManPath)" alt="" class="">
+        <img :src="getImageUrl(moonPath)" alt="">
     </div>
 </template>
 
 <script>
-// import {ironMan} from '@../../assets/images/ironMan.jpg'
 
 export default {
     data() {
         return {
             ironManPath: 'ironMan.jpg',
+            moonPath: 'fullMoon.jpg'
         }
     },
     methods: {
