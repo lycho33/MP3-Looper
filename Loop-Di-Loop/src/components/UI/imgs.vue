@@ -5,13 +5,18 @@
         </div>
         <div class="moon">
             <img :src="getImageUrl(moonPath)" alt="">
+            <Playlist />
         </div>
     </div>
 </template>
 
 <script>
+import Playlist from '../models/Playlist.vue'
 
 export default {
+    components: {
+        Playlist,
+    },
     data() {
         return {
             ironManPath: 'ironMan.jpg',
@@ -47,10 +52,15 @@ $width: 61%;
 }
 
 .moon {
-    position: absolute;
+    display: flex;
+    position: relative;
     top: 20%;
     width: $width;
-    left: 49%;
+    left: 19%;
+}
+
+.moon img {
+    z-index: 1;
 }
 
 img {
