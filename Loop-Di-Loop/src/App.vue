@@ -1,9 +1,18 @@
 <template>
-  <h1>Loop Di Loop</h1>
+  <div>
+    <h1>Loop Di Loop</h1>
+    <Imgs />
+  </div>
 </template>
 
-<script setup>
+<script>
+import Imgs from './components/UI/imgs.vue'
 
+export default {
+  components: {
+    Imgs,
+  }
+}
 </script>
 
 <style scoped>
