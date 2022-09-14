@@ -3,19 +3,24 @@
         <div class="iron-man">
             <img :src="getImageUrl(ironManPath)" alt="">
         </div>
-        <div class="moon">
-            <img :src="getImageUrl(moonPath)" alt="">
-            <Playlist />
+        <div class="moon-container">
+            <div class="moon">
+                <img :src="getImageUrl(moonPath)" alt="">
+                <Playlist />
+            </div>
+            <UrlInput />
         </div>
     </div>
 </template>
 
 <script>
 import Playlist from '../models/Playlist.vue'
+import UrlInput from '../models/UrlInput.vue'
 
 export default {
     components: {
         Playlist,
+        UrlInput,
     },
     data() {
         return {
@@ -38,7 +43,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$width: 61%;
+$width: 100%;
 
 .images {
     display: flex;
@@ -51,12 +56,17 @@ $width: 61%;
     padding-left: 2%;
 }
 
+.moon-container {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
 .moon {
     display: flex;
     position: relative;
-    top: 20%;
     width: $width;
-    left: 19%;
+    left: 7%;
 }
 
 .moon img {
