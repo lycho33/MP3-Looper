@@ -1,8 +1,11 @@
 <template>
-    <div>
-        <h3>Images</h3>
-        <img :src="getImageUrl(ironManPath)" alt="" class="">
-        <img :src="getImageUrl(moonPath)" alt="">
+    <div class="images">
+        <div class="iron-man">
+            <img :src="getImageUrl(ironManPath)" alt="">
+        </div>
+        <div class="moon">
+            <img :src="getImageUrl(moonPath)" alt="">
+        </div>
     </div>
 </template>
 
@@ -29,8 +32,30 @@ export default {
 }
 </script>
 
-<style scoped>
-h3 {
-    color: white;
+<style scoped lang="scss">
+$width: 61%;
+
+.images {
+    display: flex;
+    width: 100%;
+    height: auto;
 }
+
+.iron-man {
+    width: 30%;
+    padding-left: 2%;
+}
+
+.moon {
+    position: absolute;
+    top: 20%;
+    width: $width;
+    left: 49%;
+}
+
+img {
+    width: 90%;
+    height: auto;
+}
+
 </style>
